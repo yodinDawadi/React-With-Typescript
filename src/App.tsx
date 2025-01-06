@@ -2,7 +2,7 @@ import Greet from "./components/Greet"
 const App = () => {
   return (
     <div>
-      <Greet name="Yodin" count={99}/>
+      <Greet name="Yodin" count={99} isLoggedin={true}/>
     </div>
   )
 }

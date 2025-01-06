@@ -1,11 +1,15 @@
-type greetProps ={
+type GreetProps ={
     name:string,
-    count:number
+    count:number,
+    isLoggedin:boolean
 }
-const Greet = (props:greetProps) => {
+const Greet = (props:GreetProps) => {
   return (
     <div>
-      <h2 className="w-full text-center mt-28">Welcome {props.name}! You have {props.count} unread messages</h2>
+      <h2 className="w-full text-center mt-28">
+        {
+            props.isLoggedin?`Welcome ${props.name}! You have ${props.count} unread messages`:`Welcome Guest`
+        }</h2>
     </div>
   )
 }
